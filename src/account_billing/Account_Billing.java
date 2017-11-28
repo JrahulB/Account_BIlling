@@ -19,9 +19,14 @@ public class Account_Billing extends Application
 {
     
     @Override
-    public void start(Stage stage) throws Exception {///////
-   //   Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    public void start(Stage stage) throws Exception 
+    {
+        
+    // Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
      // Parent root = FXMLLoader.load(getClass().getResource("/updatework/ResisterDetails.fxml"));
+        
+        // I am chacking git hub operation
+        
      Parent root = FXMLLoader.load(getClass().getResource("/updatework/License_Agreement.fxml"));
             
         Scene scene = new Scene(root);
