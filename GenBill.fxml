@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.GenBillController">
+   <center>
+      <AnchorPane prefHeight="753.0" prefWidth="1190.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="412.0" layoutY="14.0" text="Generate Bill">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="srno" layoutX="142.0" layoutY="73.0" prefHeight="21.0" prefWidth="149.0" />
+            <Label layoutX="50.0" layoutY="75.0" text="Sr.No :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="369.0" layoutY="74.0" text="Date :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" layoutX="446.0" layoutY="71.0" prefHeight="20.0" prefWidth="155.0" />
+            <Label layoutX="16.0" layoutY="111.0" text="Customer Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="369.0" layoutY="111.0" text="Mob No :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mob_no" layoutX="447.0" layoutY="108.0" prefHeight="25.0" prefWidth="152.0" promptText="8888888888" />
+            <TableView fx:id="table" layoutX="-6.0" layoutY="269.0" prefHeight="334.0" prefWidth="1118.0">
+              <columns>
+                <TableColumn fx:id="items" prefWidth="295.9999694824219" text="Items" />
+                <TableColumn fx:id="quantity" prefWidth="117.0" text="Quantity" />
+                  <TableColumn fx:id="units" prefWidth="104.0" text="Units" />
+                  <TableColumn fx:id="rate" prefWidth="106.0" text="Rate" />
+                  <TableColumn fx:id="total" prefWidth="113.0" text="Total" />
+                  <TableColumn fx:id="table_cgst" prefWidth="210.0" text="CGST">
+                     <columns>
+                        <TableColumn fx:id="cgst_rate" prefWidth="75.0" text="Rate" />
+                        <TableColumn fx:id="cgst_amount" prefWidth="75.0" text="Amount" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="table_sgst" prefWidth="81.0" text="SGST">
+                     <columns>
+                        <TableColumn fx:id="sgst_rate" prefWidth="75.0" text="Rate" />
+                        <TableColumn fx:id="sgst_amount" prefWidth="75.0" text="Amount" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="hsncode" prefWidth="93.0" text="HSN Code" />
+              </columns>
+            </TableView>
+            <Label layoutX="95.0" layoutY="197.0" text="Items">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cost" layoutX="267.0" layoutY="223.0" prefHeight="10.0" prefWidth="89.0" />
+            <Label layoutX="297.0" layoutY="198.0" prefWidth="29.0" text="Cost">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="196.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantity1" layoutX="486.0" layoutY="221.0" onAction="#quantityAction" prefHeight="17.0" prefWidth="87.0" />
+            <Label layoutX="611.0" layoutY="196.0" text="Units">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="705.0" layoutY="196.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="items1" layoutX="4.0" layoutY="223.0" onAction="#itmesAction" prefHeight="25.0" prefWidth="252.0" />
+            <TextField fx:id="total1" layoutX="680.0" layoutY="221.0" onAction="#totalAction" prefHeight="20.0" prefWidth="83.0" />
+            <Label layoutX="936.0" layoutY="196.0" text="Stock">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stock1" layoutX="916.0" layoutY="223.0" prefHeight="22.0" prefWidth="83.0" />
+            <Button layoutX="1021.0" layoutY="105.0" mnemonicParsing="false" onAction="#printAction" prefHeight="21.0" prefWidth="104.0" text="Print">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1021.0" layoutY="146.0" mnemonicParsing="false" onAction="#tableEntry" prefHeight="21.0" prefWidth="104.0" text="ADD">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1021.0" layoutY="231.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="21.0" prefWidth="104.0" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1021.0" layoutY="191.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="21.0" prefWidth="104.0" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="units1" layoutX="586.0" layoutY="221.0" prefHeight="25.0" prefWidth="85.0" />
+            <TextField fx:id="net_total" layoutX="635.0" layoutY="604.0" prefHeight="25.0" prefWidth="91.0" />
+            <Label layoutX="106.0" layoutY="606.0" prefHeight="20.0" prefWidth="97.0" text="Net Total :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cus_name" layoutX="141.0" layoutY="108.0" onAction="#customerAction" prefWidth="150.0" />
+            <TextField fx:id="sgst" layoutX="852.0" layoutY="223.0" prefHeight="25.0" prefWidth="47.0" />
+            <TextField fx:id="cgst" layoutX="778.0" layoutY="223.0" prefHeight="25.0" prefWidth="55.0" />
+            <Label layoutX="848.0" layoutY="199.0" text="SGST">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="778.0" layoutY="199.0" text="CGST">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="142.0" layoutY="149.0" />
+            <TextField fx:id="pan_no" layoutX="443.0" layoutY="141.0" />
+            <ComboBox fx:id="trans_mode" layoutX="789.0" layoutY="81.0" prefWidth="150.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="153.0" prefHeight="17.0" prefWidth="87.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="144.0" prefHeight="17.0" prefWidth="87.0" text="GST No :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="628.0" layoutY="82.0" prefHeight="19.0" prefWidth="138.0" text="Transportation mode:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="199.0" prefHeight="17.0" prefWidth="74.0" text="HSN Code">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hsn_code" layoutX="376.0" layoutY="223.0" prefHeight="10.0" prefWidth="89.0" />
+            <Label fx:id="label_cgst" layoutX="811.0" layoutY="199.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_sgst" layoutX="883.0" layoutY="199.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="total_qty" layoutX="288.0" layoutY="602.0" prefHeight="28.0" prefWidth="136.0" />
+            <TextField fx:id="total_rate" layoutX="512.0" layoutY="602.0" prefHeight="28.0" prefWidth="89.0" />
+            <TextField fx:id="c_rate" layoutX="733.0" layoutY="604.0" prefHeight="25.0" prefWidth="76.0" />
+            <TextField fx:id="total_amount" layoutX="810.0" layoutY="604.0" prefHeight="25.0" prefWidth="76.0" />
+            <TextField fx:id="s_rate" layoutX="886.0" layoutY="604.0" prefHeight="25.0" prefWidth="76.0" />
+            <TextField fx:id="s_amount" layoutX="961.0" layoutY="604.0" prefHeight="25.0" prefWidth="76.0" />
+            <TextField fx:id="total_hsn" layoutX="1037.0" layoutY="604.0" prefHeight="25.0" prefWidth="76.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

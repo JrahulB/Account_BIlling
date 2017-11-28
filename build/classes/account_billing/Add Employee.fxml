@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.AddEmployeeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="585.0" layoutY="49.0" text="Add Employee">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="163.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="640.0" layoutY="161.0" />
+            <Label layoutX="550.0" layoutY="205.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="640.0" layoutY="203.0" />
+            <Label layoutX="553.0" layoutY="291.0" text="Qualificaton :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="565.0" layoutY="336.0" text="Job :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="job" layoutX="646.0" layoutY="334.0" />
+            <Label layoutX="559.0" layoutY="369.0" text="Salary :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="salary" layoutX="646.0" layoutY="367.0" />
+            <Label layoutX="551.0" layoutY="248.0" prefHeight="19.0" prefWidth="93.0" text="Date of Birth :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qualification" layoutX="646.0" layoutY="288.0" />
+            <Button fx:id="add" layoutX="661.0" layoutY="505.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="30.0" prefWidth="70.0" text="ADD">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="549.0" layoutY="116.0" text="ID * :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" layoutX="640.0" layoutY="114.0" />
+            <DatePicker fx:id="birthday" layoutX="644.0" layoutY="246.0" prefHeight="25.0" prefWidth="148.0" />
+            <Label layoutX="558.0" layoutY="402.0" text="Phone :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phone" layoutX="646.0" layoutY="400.0" />
+            <Label layoutX="842.0" layoutY="622.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

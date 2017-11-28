@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="692.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updatework.Other_Details_UpdateController">
+    <children>
+      <VBox layoutX="140.0" layoutY="96.0" prefHeight="243.0" prefWidth="215.0" spacing="28.0">
+         <children>
+            <Label text="Enter your mother name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label text="Enter your lucky number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label text="Enter your favorite colour :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label text="Enter your best friend name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label text="Enter your school name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox layoutX="368.0" layoutY="96.0" prefHeight="243.0" prefWidth="156.0" spacing="22.0">
+         <children>
+            <TextField fx:id="Mother_name" />
+            <TextField fx:id="Lucky_number" />
+            <TextField fx:id="Favorite_colour" />
+            <TextField fx:id="Best_friend_name" />
+            <TextField fx:id="School_name" />
+         </children>
+      </VBox>
+      <Label layoutX="259.0" layoutY="14.0" prefHeight="25.0" prefWidth="347.0" text="Other  Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Button layoutX="149.0" layoutY="383.0" mnemonicParsing="false" onAction="#changeactinPerformed" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="381.0" layoutY="382.0" mnemonicParsing="false" onAction="#clickOnCancel" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="265.0" layoutY="385.0" mnemonicParsing="false" onAction="#loadactinPerformed" text="Load">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="148.0" layoutY="338.0" text="Hint:  Enter your mother name and press load for updation " />
+      
+   </children>
+
+</AnchorPane>

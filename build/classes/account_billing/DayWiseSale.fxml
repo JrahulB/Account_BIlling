@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.DayWiseSaleController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="800.0" prefWidth="1302.0">
+               <children>
+                  <Label layoutX="274.0" layoutY="129.0" prefHeight="34.0" prefWidth="108.0" text="Day :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="date" layoutX="400.0" layoutY="133.0" />
+                  <Button fx:id="show" layoutX="487.0" layoutY="229.0" mnemonicParsing="false" onAction="#showMethod" text="Display">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="day_wise" layoutX="608.0" layoutY="134.0" prefWidth="150.0" />
+                  <Label layoutX="503.0" layoutY="42.0" text="Day Wise Sale">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="table" layoutX="248.0" layoutY="293.0" prefHeight="320.0" prefWidth="746.0">
+                    <columns>
+                      <TableColumn fx:id="Billno" prefWidth="150.0" text="Bill No" />
+                      <TableColumn fx:id="customername" prefWidth="150.0" text="Customer Name" />
+                        <TableColumn fx:id="Itemname" prefWidth="150.0" text="Item Name" />
+                        <TableColumn fx:id="quantity" prefWidth="150.0" text="Quantity" />
+                        <TableColumn fx:id="total" prefWidth="150.0" text="Total" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="868.0" layoutY="667.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

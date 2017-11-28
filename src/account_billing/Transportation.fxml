@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.TransportationController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="553.0" layoutY="115.0" text="Transportation mode">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="transportation" layoutX="522.0" layoutY="219.0" prefWidth="150.0" />
+            <Button fx:id="submit" layoutX="638.0" layoutY="315.0" mnemonicParsing="false" onAction="#trans1Action" text="Submit">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="818.0" layoutY="655.0" prefHeight="17.0" prefWidth="419.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+            <TextField fx:id="name" layoutX="697.0" layoutY="219.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

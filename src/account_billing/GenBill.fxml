@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.GenBillController">
+   <right>
+      <AnchorPane prefHeight="753.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="576.0" layoutY="23.0" text="Gen Bill">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="srno" layoutX="344.0" layoutY="86.0" prefHeight="19.0" prefWidth="149.0" />
+            <Label layoutX="287.0" layoutY="88.0" text="Sr.No :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="859.0" layoutY="88.0" text="Date :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="date" layoutX="915.0" layoutY="86.0" prefHeight="22.0" prefWidth="155.0" />
+            <Label layoutX="515.0" layoutY="88.0" text="Customer Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="852.0" layoutY="136.0" text="Mob No :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mob_no" layoutX="915.0" layoutY="134.0" prefHeight="25.0" prefWidth="155.0" />
+            <TableView fx:id="table" layoutX="151.0" layoutY="325.0" prefHeight="258.0" prefWidth="1123.0" AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="325.0">
+              <columns>
+                <TableColumn fx:id="items" prefWidth="150.0" text="Items" />
+                  <TableColumn fx:id="quantity" prefWidth="75.0" text="Quantity" />
+                  <TableColumn fx:id="units" prefWidth="75.0" text="Units" />
+                  <TableColumn fx:id="rate" prefWidth="130.0" text="Rate" />
+                  <TableColumn fx:id="total" prefWidth="130.0" text="Sub Total" />
+                  <TableColumn fx:id="table_cgst" prefWidth="150.0" text="CGST">
+                     <columns>
+                        <TableColumn fx:id="cgst_rate" prefWidth="75.0" text="Rate" />
+                        <TableColumn fx:id="cgst_amount" prefWidth="75.0" text="Amount" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="table_sgst" prefWidth="150.0" text="SGST">
+                     <columns>
+                        <TableColumn fx:id="sgst_rate" prefWidth="75.0" text="Rate" />
+                        <TableColumn fx:id="sgst_amount" prefWidth="75.0" text="Amount" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="totaltax" prefWidth="73.0" text="Total Tax" />
+                  <TableColumn fx:id="ftaxtotal" prefWidth="100.0" text="Total" />
+                  <TableColumn fx:id="hsncode" prefWidth="90.0" text="HSN Code" />
+              </columns>
+            </TableView>
+            <Label layoutX="291.0" layoutY="237.0" text="Items">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cost" layoutX="366.0" layoutY="266.0" prefHeight="12.0" prefWidth="89.0" />
+            <Label layoutX="396.0" layoutY="237.0" prefWidth="29.0" text="Cost">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="467.0" layoutY="237.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantity1" layoutX="467.0" layoutY="265.0" onAction="#quantityAction" prefHeight="17.0" prefWidth="87.0" />
+            <Label layoutX="696.0" layoutY="237.0" text="Units">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="189.0" layoutY="588.0" text="Net Total ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="items1" layoutX="268.0" layoutY="266.0" onAction="#itmesAction" prefHeight="25.0" prefWidth="83.0" />
+            <TextField fx:id="total1" layoutX="760.0" layoutY="261.0" onAction="#totalAction" prefHeight="20.0" prefWidth="83.0" />
+            <Label layoutX="1076.0" layoutY="237.0" text="Stock">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stock1" layoutX="1053.0" layoutY="261.0" prefHeight="22.0" prefWidth="83.0" />
+            <Button layoutX="1162.0" layoutY="120.0" mnemonicParsing="false" onAction="#printAction" prefHeight="21.0" prefWidth="104.0" text="Print">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1162.0" layoutY="156.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="104.0" text="Home">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="add" layoutX="1162.0" layoutY="203.0" mnemonicParsing="false" onAction="#tableEntry" prefHeight="21.0" prefWidth="104.0" text="ADD">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1162.0" layoutY="242.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="21.0" prefWidth="104.0" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1162.0" layoutY="277.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="21.0" prefWidth="104.0" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="units1" layoutX="672.0" layoutY="261.0" prefHeight="25.0" prefWidth="83.0" />
+            <Label layoutX="280.0" layoutY="136.0" prefHeight="13.0" prefWidth="60.0" text="GST NO :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pan_no" layoutX="348.0" layoutY="134.0" prefHeight="22.0" prefWidth="155.0" />
+            <Label layoutX="287.0" layoutY="186.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="348.0" layoutY="184.0" prefHeight="25.0" prefWidth="264.0" />
+            <Label layoutX="514.0" layoutY="137.0" text="Transportation :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="transportation" layoutX="632.0" layoutY="134.0" prefHeight="25.0" prefWidth="195.0" />
+            <ComboBox fx:id="cus_name" layoutX="634.0" layoutY="86.0" onAction="#customerAction" prefHeight="25.0" prefWidth="195.0" />
+            <Label layoutX="785.0" layoutY="237.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="843.0" layoutY="684.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+            <Label layoutX="883.0" layoutY="237.0" text="CGST">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="984.0" layoutY="237.0" text="SGST">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cgst" layoutX="859.0" layoutY="261.0" prefHeight="22.0" prefWidth="83.0" />
+            <TextField fx:id="sgst" layoutX="961.0" layoutY="261.0" prefHeight="22.0" prefWidth="83.0" />
+            <Label layoutX="572.0" layoutY="237.0" prefHeight="20.0" prefWidth="73.0" text="HSN Code">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hsn_code" layoutX="567.0" layoutY="261.0" prefHeight="22.0" prefWidth="83.0" />
+            <TextField fx:id="total_rate" layoutX="454.0" layoutY="585.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField fx:id="total_qty" layoutX="297.0" layoutY="585.0" prefHeight="25.0" prefWidth="78.0" />
+            <TextField fx:id="net_total" layoutX="578.0" layoutY="585.0" prefHeight="25.0" prefWidth="124.0" />
+            <TextField fx:id="total_amount" layoutX="779.0" layoutY="585.0" prefHeight="25.0" prefWidth="81.0" />
+            <TextField fx:id="total_tax" layoutX="1004.0" layoutY="583.0" prefHeight="25.0" prefWidth="81.0" />
+            <TextField fx:id="s_amount" layoutX="921.0" layoutY="583.0" prefHeight="25.0" prefWidth="81.0" />
+            <TextField fx:id="total_net" layoutX="1090.0" layoutY="583.0" prefHeight="25.0" prefWidth="92.0" />
+            <Label fx:id="label_cgst" layoutX="921.0" layoutY="239.0" />
+            <Label fx:id="label_sgst" layoutX="1020.0" layoutY="239.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

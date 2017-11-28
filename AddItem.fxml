@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.AddItemController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Pane prefHeight="404.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="163.0" layoutY="70.0" text="ID * :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="id" layoutX="236.0" layoutY="71.0" />
+                  <Label layoutX="155.0" layoutY="118.0" text="Name :">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="155.0" layoutY="163.0" text="Cost :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="201.0" text="CGST (%) :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="248.0" text="SGST (%) :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="236.0" layoutY="119.0" />
+                  <TextField fx:id="cost" layoutX="236.0" layoutY="164.0" />
+                  <TextField fx:id="cgst" layoutX="236.0" layoutY="202.0" />
+                  <TextField fx:id="sgst" layoutX="236.0" layoutY="249.0" />
+                  <Button fx:id="add" layoutX="236.0" layoutY="308.0" mnemonicParsing="false" onAction="#addItem" prefHeight="37.0" prefWidth="95.0" text="ADD">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="stock" layoutX="236.0" layoutY="275.0" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

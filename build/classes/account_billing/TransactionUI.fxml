@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="546.0" layoutY="23.0" text="TransactionUI">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="208.0" layoutY="95.0" prefHeight="493.0" prefWidth="888.0">
+                    <columns>
+                      <TableColumn prefWidth="150.0" text="Date" />
+                      <TableColumn prefWidth="200.0" text="Name" />
+                        <TableColumn prefWidth="200.0" text="Paying_Mode" />
+                        <TableColumn prefWidth="150.0" text="Amount" />
+                        <TableColumn prefWidth="200.0" text="Narration" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

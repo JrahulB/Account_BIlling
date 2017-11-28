@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.FXMLDocumentController">
+   <top>
+      <MenuBar prefHeight="28.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Items">
+               <items>
+                  <Menu mnemonicParsing="false" text="Add">
+                    <items>
+                      <MenuItem fx:id="add_item" mnemonicParsing="false" onAction="#handleButtonAction" onMenuValidation="#addItemMenu" text="Add  Items" />
+                        <MenuItem fx:id="addaccount" mnemonicParsing="false" onAction="#addAccount" onMenuValidation="#addAccountMenu" text="Add Account" />
+                        <MenuItem mnemonicParsing="false" onAction="#employeeAction" onMenuValidation="#employeeMenu" text="Add Employee" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#edititemMenu" text="Edit Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#editAccountMenu" text="Edit Account" />
+                        <MenuItem fx:id="editemp" mnemonicParsing="false" onAction="#editempMenu" text="Edit Employee" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="delete" mnemonicParsing="false" onAction="#deleteMenu" text="Delete">
+                    <items>
+                        <MenuItem fx:id="deleteitem" mnemonicParsing="false" onAction="#deleteMenu" text="Delete Item" />
+                        <MenuItem fx:id="delete_Emp" mnemonicParsing="false" onAction="#deleteMenu" text="Delete Employee" />
+                        <MenuItem fx:id="deleteAcc" mnemonicParsing="false" onAction="#deleteMenu" text="Account" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu fx:id="bill" mnemonicParsing="false" onAction="#BillMenu" text="Bill">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#genbilMenu" text="Generate Bill" />
+                  <MenuItem fx:id="canBill" mnemonicParsing="false" onAction="#canBillMenu" text="Cancel Bill" />
+                  <MenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#dayWiseMenu" text="Day_Wise_Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#daytodayMenu" text="Day_To_Day_Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#balstockMenu" text="Balance Stock" />
+                  <MenuItem mnemonicParsing="false" onAction="#nilMenu" text="Nil Stock" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Others">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#empattMenu" text="Employee Attendance" />
+                  <MenuItem mnemonicParsing="false" text="Fund Transfer" />
+                  <MenuItem mnemonicParsing="false" onAction="#transactionMenu" text="Transaction Report" />
+                  <MenuItem fx:id="trasnportation" mnemonicParsing="false" onAction="#TransportationMenu" text="Transportation Way" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Tools">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#cleanupMenu" text="Clean_Up" />
+                  <MenuItem mnemonicParsing="false" onAction="#backupMenu" text="Back_Up" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Setting">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#personalSettingMenu" text="PersonalSetting" />
+                  <MenuItem mnemonicParsing="false" onAction="#register_Details_Menu" text="ResisterDetails" />
+                  <MenuItem mnemonicParsing="false" onAction="#business_Details_Menu" text="Business_Details" />
+                  <MenuItem mnemonicParsing="false" onAction="#other_Details_Menu" text="Other_Details" />
+                <MenuItem mnemonicParsing="false" onAction="#ChangePasswordAction" text="changePassword" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <HBox fx:id="hbox" prefHeight="425.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="day_to" prefHeight="455.0" prefWidth="150.0" style="-fx-background-color: rgb(69, 69, 84);" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="10.0" prefHeight="30.0" prefWidth="155.0" text="Shortcut_Keys" textFill="#f2eeee">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="add_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleButtonAction" onKeyPressed="#addItemKeyEvent" prefHeight="31.0" prefWidth="155.0" text="Add Item" />
+                  <Button fx:id="account" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="84.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="25.0" prefWidth="153.0" text="Add Account" />
+                  <Button fx:id="balance" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="109.0" mnemonicParsing="false" onAction="#balstockAction" prefHeight="25.0" prefWidth="152.0" text="Balance Stock" />
+                  <Button fx:id="day_wise" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="134.0" mnemonicParsing="false" onAction="#dayWiseAction" prefHeight="27.0" prefWidth="152.0" text="Day_wise_Sale" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="161.0" mnemonicParsing="false" onAction="#daytodayAction" prefHeight="25.0" prefWidth="152.0" text="Day_to_Day" />
+                  <Button fx:id="employee" alignment="CENTER" contentDisplay="CENTER" layoutY="186.0" mnemonicParsing="false" onAction="#employeeAction" prefHeight="25.0" prefWidth="151.0" text="Add Employee" />
+                  <Button fx:id="attendance" alignment="CENTER" contentDisplay="CENTER" layoutY="212.0" mnemonicParsing="false" onAction="#empattAction" prefHeight="25.0" prefWidth="151.0" text="Employee Attendance" />
+                  <Button fx:id="attendance1" alignment="CENTER" contentDisplay="CENTER" layoutY="230.0" mnemonicParsing="false" onAction="#nilAction" prefHeight="25.0" prefWidth="151.0" text="Nill Stock" />
+                  <Button fx:id="attendance11" alignment="CENTER" contentDisplay="CENTER" layoutY="255.0" mnemonicParsing="false" onAction="#backupAction" prefHeight="25.0" prefWidth="151.0" text="Backup" />
+                  <Button fx:id="attendance111" alignment="CENTER" contentDisplay="CENTER" layoutY="280.0" mnemonicParsing="false" onAction="#fundAction" prefHeight="25.0" prefWidth="150.0" text="Fund Transfer" />
+                  <Button fx:id="attendance1111" alignment="CENTER" contentDisplay="CENTER" layoutY="305.0" mnemonicParsing="false" onAction="#genbillAction" prefHeight="25.0" prefWidth="152.0" text="Gen Bill" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutY="330.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="25.0" prefWidth="152.0" text="Delete" />
+                  <Button fx:id="delete_item11" alignment="CENTER" contentDisplay="CENTER" layoutY="355.0" mnemonicParsing="false" onAction="#transactionAction" prefHeight="25.0" prefWidth="152.0" text="Transaction Report" />
+                  <Button fx:id="Editemp" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="380.0" mnemonicParsing="false" onAction="#employee1Action" prefHeight="25.0" prefWidth="152.0" text="Edit Employee" />
+                  <Button fx:id="Editietm1" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="405.0" mnemonicParsing="false" onAction="#edititem1Action" prefHeight="25.0" prefWidth="152.0" text="Edit Item" />
+                  <Button fx:id="Edit" alignment="CENTER" contentDisplay="CENTER" layoutY="430.0" mnemonicParsing="false" onAction="#editAccout1Action" prefHeight="25.0" prefWidth="152.0" text="Edit Account" />
+                  <Pane fx:id="framepane" layoutX="-1315.0" layoutY="1.0" prefHeight="774.0" prefWidth="1305.0">
+                     <children>
+                        <Pane layoutX="157.0" layoutY="-1.0" prefHeight="776.0" prefWidth="1134.0">
+                           <children>
+                              <ImageView fitHeight="161.0" fitWidth="371.0" layoutX="278.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../OBill.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D height="227.0" width="500.0" />
+                                 </viewport>
+                              </ImageView>
+                              <ImageView fitHeight="131.0" fitWidth="330.0" layoutX="680.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Button fx:id="Edit1" alignment="CENTER" contentDisplay="CENTER" layoutY="455.0" mnemonicParsing="false" onAction="#editAccout1Action" prefHeight="25.0" prefWidth="150.0" text="CleanUp" />
+                  <Button fx:id="Edit111" alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="480.0" mnemonicParsing="false" onAction="#editAccout1Action" prefHeight="25.0" prefWidth="152.0" text="BillPayment" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="505.0" mnemonicParsing="false" onAction="#canBillAction" prefHeight="25.0" prefWidth="152.0" text="Cancel Bill" />
+                  <Button layoutX="-2.0" layoutY="530.0" mnemonicParsing="false" onAction="#InvoiceAction" prefHeight="25.0" prefWidth="152.0" text="Invoice Bill" />
+                  <Button fx:id="install" layoutX="-1.0" layoutY="555.0" mnemonicParsing="false" onAction="#installAction" prefHeight="25.0" prefWidth="152.0" text="    Install" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

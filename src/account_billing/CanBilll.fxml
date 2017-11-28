@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.CanBilllController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="495.0" layoutY="99.0" text="Cancel Bill">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="439.0" layoutY="174.0" text="ID :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id1" layoutX="505.0" layoutY="171.0" prefHeight="25.0" prefWidth="182.0" />
+            <Label layoutX="439.0" layoutY="231.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="438.0" layoutY="285.0" text="Phone No :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="505.0" layoutY="228.0" prefHeight="25.0" prefWidth="182.0" />
+            <TextField fx:id="pho" layoutX="511.0" layoutY="283.0" prefHeight="25.0" prefWidth="182.0" />
+            <Button fx:id="canButton" layoutX="505.0" layoutY="354.0" mnemonicParsing="false" onAction="#showDisplayAction" prefHeight="25.0" prefWidth="138.0" text="Cancel Bill" />
+            <Label layoutX="673.0" layoutY="607.0" text="Copyright @ by Osier Systems Private Limited. All Right Reserved." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

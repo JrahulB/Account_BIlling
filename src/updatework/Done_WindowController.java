@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package updatework;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+/**
+ * FXML Controller class
+ *
+ * @author G1 NOTEBOOK
+ */
+public class Done_WindowController implements Initializable
+{
+
+    @FXML
+    private AnchorPane anchor;
+
+
+    
+    
+                    @Override
+                    public void initialize(URL url, ResourceBundle rb) 
+                    {
+
+                    }    
+
+                    @FXML
+                    private void click_On_Ok(ActionEvent event) throws IOException
+                    {
+                            
+//                          Parent parent = FXMLLoader.load(getClass().getResource("/updatework/FXMLDocument.fxml"));
+//                            anchor.getChildren().setAll(parent);
+                        Parent root = FXMLLoader.load(getClass().getResource("/account_billing/FXMLDocument.fxml"));
+                    
+                               Scene scene = new Scene(root);
+                                Stage stage=new Stage();
+                               stage.setScene(scene);
+                               stage.show();
+                        
+                               //Login
+                    }
+    
+}

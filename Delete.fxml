@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.DeleteController">
+   <center>
+      <AnchorPane prefHeight="808.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="640.0" layoutY="57.0" text="Delete tem">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="640.0" layoutY="174.0" text="Item Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="640.0" layoutY="215.0" text="Employee Name  :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="645.0" layoutY="256.0" text="Account Name  :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="itemnm" layoutX="779.0" layoutY="172.0" />
+            <TextField fx:id="empname" layoutX="779.0" layoutY="213.0" />
+            <TextField fx:id="accname" layoutX="779.0" layoutY="253.0" />
+            <CheckBox fx:id="emp" layoutX="423.0" layoutY="215.0" mnemonicParsing="false" text="Employee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="account" layoutX="423.0" layoutY="266.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="103.0" text="Account">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="item" layoutX="423.0" layoutY="174.0" mnemonicParsing="false" text="Item">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="delete" layoutX="676.0" layoutY="366.0" mnemonicParsing="false" onAction="#actinPerformed" prefHeight="30.0" prefWidth="103.0" text="Delete">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

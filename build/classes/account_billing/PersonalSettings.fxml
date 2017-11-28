@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.PersonalSettingsController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="509.0" layoutY="14.0" text="PersonalSetting">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="431.0" layoutY="101.0" prefHeight="20.0" prefWidth="125.0" text="Enter Your Name ?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pet_name" layoutX="672.0" layoutY="98.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="430.0" layoutY="130.0" text="Enter Your Best friends Name ?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="friends_name" layoutX="672.0" layoutY="128.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="431.0" layoutY="153.0" prefHeight="20.0" prefWidth="186.0" text="Enter Your Lucky Number ?">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lucky_No" layoutX="672.0" layoutY="161.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="528.0" layoutY="217.0" prefHeight="20.0" prefWidth="118.0" text="Old Shop Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="old_shopNm" layoutX="672.0" layoutY="215.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="528.0" layoutY="256.0" text="Old Shop Address :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="524.0" layoutY="294.0" prefHeight="20.0" prefWidth="130.0" text="New Shop Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="old_shopAdd" layoutX="672.0" layoutY="254.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="new_shopNm" layoutX="672.0" layoutY="292.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="526.0" layoutY="331.0" prefHeight="20.0" prefWidth="132.0" text="New Shop Address :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_shopAdd" layoutX="672.0" layoutY="329.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="522.0" layoutY="380.0" text="Old Bank Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="old_bankNm" layoutX="674.0" layoutY="378.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="514.0" layoutY="414.0" prefHeight="20.0" prefWidth="156.0" text="Old Account  Number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="old_AccNo" layoutX="674.0" layoutY="412.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="517.0" layoutY="447.0" text="Old IFSC Number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="old_ifscNo" layoutX="674.0" layoutY="445.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="519.0" layoutY="485.0" text="New bank Name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_bankNm" layoutX="672.0" layoutY="483.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="513.0" layoutY="530.0" text="New Account  Number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_AccNm" layoutX="672.0" layoutY="528.0" prefHeight="25.0" prefWidth="185.0" />
+            <Label layoutX="514.0" layoutY="569.0" text="New IFSC Number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="new_ifscNm" layoutX="674.0" layoutY="567.0" prefHeight="25.0" prefWidth="185.0" />
+            <Button fx:id="update" layoutX="613.0" layoutY="639.0" mnemonicParsing="false" onAction="#updateButtonAction" text="Update">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancel" layoutX="724.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Cancel">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="838.0" layoutY="664.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

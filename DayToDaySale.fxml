@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.DayToDaySaleController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="471.0" layoutY="46.0" text="Day-to-Day Sale">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="379.0" layoutY="181.0" text="From Date : ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="date" layoutX="508.0" layoutY="178.0" />
+            <Label layoutX="379.0" layoutY="261.0" text="To Date : ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="date1" layoutX="508.0" layoutY="258.0" />
+            <ComboBox fx:id="day_to_day" layoutX="715.0" layoutY="178.0" prefWidth="150.0" />
+            <Button layoutX="566.0" layoutY="327.0" mnemonicParsing="false" onAction="#showMethod" text="Display">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="table" layoutX="173.0" layoutY="365.0" prefHeight="360.0" prefWidth="717.0">
+              <columns>
+                <TableColumn fx:id="Billno" prefWidth="75.0" text="Bill No" />
+                <TableColumn fx:id="customername" prefWidth="187.0" text="Customer Name" />
+                  <TableColumn fx:id="Itemname" prefWidth="171.0" text="Product Name" />
+                  <TableColumn fx:id="quantity" prefWidth="147.0" text="Quantity" />
+                  <TableColumn fx:id="total" prefWidth="134.0" text="Total" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

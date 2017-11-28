@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1208.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.AddItemsController">
+   <top>
+      <AnchorPane fx:id="anchor" prefHeight="800.0" prefWidth="1277.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="462.0" layoutY="28.0" text="Add Item">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="177.0" layoutY="112.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="233.0" layoutY="109.0" />
+            <Label layoutX="178.0" layoutY="156.0" text="Main unit Details">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutX="164.0" layoutY="189.0" prefHeight="119.0" prefWidth="298.0" style="-fx-border-color: rgb(185,185,198);;">
+               <children>
+                  <Label layoutX="27.0" layoutY="22.0" prefHeight="19.0" prefWidth="42.0" text="Unit :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBox" layoutX="72.0" layoutY="19.0" onAction="#handleUnitComboBoxAction" prefHeight="25.0" prefWidth="88.0" />
+                  <Label layoutX="27.0" layoutY="62.0" prefHeight="19.0" prefWidth="42.0" text="Stock :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stock" layoutX="71.0" layoutY="59.0" prefHeight="25.0" prefWidth="95.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="152.0" layoutY="349.0" prefHeight="248.0" prefWidth="310.0" style="-fx-border-color: rgb(185,185,198);;">
+               <children>
+                  <Label layoutX="14.0" layoutY="23.0" prefHeight="19.0" prefWidth="144.0" text="Sales Price applied on">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="62.0" prefHeight="19.0" prefWidth="76.0" text="Sales Price ">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="166.0" layoutY="23.0" prefHeight="19.0" prefWidth="144.0" text="Purc.Price applied on">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="unit1" layoutX="98.0" layoutY="62.0" prefHeight="19.0" prefWidth="76.0" text="(PCS) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sale_price" layoutX="149.0" layoutY="59.0" prefHeight="25.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="27.0" layoutY="98.0" prefHeight="19.0" prefWidth="76.0" text="Purc. Price ">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="unit3" layoutX="65.0" layoutY="132.0" prefHeight="19.0" prefWidth="76.0" text="(PCS) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purc_price" layoutX="149.0" layoutY="95.0" prefHeight="25.0" prefWidth="86.0" promptText="0.00" />
+                  <Label fx:id="unit2" layoutX="98.0" layoutY="98.0" prefHeight="19.0" prefWidth="76.0" text="(PCS) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mrp" layoutX="149.0" layoutY="129.0" prefHeight="25.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="27.0" layoutY="169.0" prefHeight="19.0" prefWidth="76.0" text="Min.Sale">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="unit4" layoutX="82.0" layoutY="169.0" prefHeight="19.0" prefWidth="76.0" text="(PCS) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="minPrice" layoutX="145.0" layoutY="166.0" prefHeight="25.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="27.0" layoutY="205.0" prefHeight="19.0" prefWidth="92.0" text="Self-val.Price">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="set_val_price" layoutX="145.0" layoutY="202.0" prefHeight="25.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="22.0" layoutY="132.0" prefHeight="19.0" prefWidth="76.0" text="M.R.P">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="164.0" layoutY="322.0" prefHeight="19.0" prefWidth="106.0" text="Item Price Info">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="557.0" layoutY="110.0" text="Default Unit For Sales">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="742.0" layoutY="110.0" text="Default Unit For Purc.">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="548.0" layoutY="147.0" text="HSN/SAC Code For GST :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hss_gst" layoutX="743.0" layoutY="144.0" />
+            <Label layoutX="572.0" layoutY="180.0" text="Tax Category :">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="541.0" layoutY="209.0" text="Item Tax Details">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutX="536.0" layoutY="228.0" prefHeight="189.0" prefWidth="505.0" style="-fx-border-color: rgb(185,185,198);;">
+               <children>
+                  <Label layoutX="44.0" layoutY="22.0" prefHeight="19.0" prefWidth="42.0" text="Type">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="283.0" layoutY="54.0" prefHeight="19.0" prefWidth="85.0" text="Tax on MRP :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cgst" layoutX="166.0" layoutY="51.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="20.0" layoutY="95.0" prefHeight="19.0" prefWidth="132.0" text="Rate of Tax(SGST) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sgst" layoutX="166.0" layoutY="92.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="20.0" layoutY="137.0" prefHeight="19.0" prefWidth="132.0" text="Rate of Tax(GST) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="gst" layoutX="166.0" layoutY="134.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="27.0" layoutY="54.0" prefHeight="19.0" prefWidth="132.0" text="Rate of Tax(CGST) :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tax_mrp" layoutX="377.0" layoutY="51.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="283.0" layoutY="95.0" prefHeight="19.0" prefWidth="101.0" text="Taxation Type :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tax_typ" layoutX="377.0" layoutY="92.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+               </children>
+            </Pane>
+            <Pane layoutX="540.0" layoutY="447.0" prefHeight="174.0" prefWidth="497.0" style="-fx-border-color: rgb(185,185,198);;">
+               <children>
+                  <Label layoutX="27.0" layoutY="22.0" prefHeight="19.0" prefWidth="99.0" text="Sale Discount :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="95.0" prefHeight="19.0" prefWidth="172.0" text="Specify Sale Disc.Structure:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="spec_sale_desc" layoutX="181.0" layoutY="92.0" prefHeight="25.0" prefWidth="60.0" promptText="N" />
+                  <Label layoutX="27.0" layoutY="54.0" prefHeight="19.0" prefWidth="161.0" text="Sale Componunts Disc :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sale_dis1" layoutX="166.0" layoutY="19.0" prefHeight="12.0" prefWidth="86.0" promptText="0.00" />
+                  <Label layoutX="277.0" layoutY="87.0" prefHeight="19.0" prefWidth="172.0" text="Specify Purc.Disc.Structure:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="spec_pure_disc" layoutX="449.0" layoutY="84.0" prefHeight="25.0" prefWidth="37.0" promptText="N" />
+                  <Label layoutX="277.0" layoutY="22.0" prefHeight="19.0" prefWidth="99.0" text="Purc. Discount :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="purc_dis" layoutX="382.0" layoutY="19.0" prefHeight="25.0" prefWidth="56.0" promptText="0.00" />
+                  <Label layoutX="277.0" layoutY="57.0" prefHeight="19.0" prefWidth="161.0" text="Purc.Componunts Disc :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="541.0" layoutY="428.0" text="Discount &amp; Markup.Dep">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="238.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Note" />
+            <Button layoutX="338.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Opt.Fields" />
+            <Button fx:id="save" layoutX="462.0" layoutY="639.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="65.0" text="Save" />
+            <Button layoutX="572.0" layoutY="639.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Quit" />
+            <ComboBox fx:id="tax_cat" layoutX="742.0" layoutY="177.0" onAction="#handleTaxComboBoxAction" prefWidth="150.0" />
+            <Button layoutX="1015.0" layoutY="34.0" mnemonicParsing="false" onAction="#ExitAction" text="EXIT" />
+            <Label layoutX="824.0" layoutY="656.0" text="Copyright  © 2017  by Osier Systems Private Limited. All Right Reserved." />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updatework.Other_DetailsController">
+   <center>
+      <AnchorPane fx:id="anchor" prefHeight="800.0" prefWidth="1060.0" BorderPane.alignment="CENTER">
+    <children>
+      <VBox layoutX="321.0" layoutY="216.0" prefHeight="235.0" prefWidth="255.0" spacing="28.0">
+         <children>
+            <Label text="Enter your mother name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Enter your lucky number :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Enter your favorite colour :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Enter your best friend name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Enter your school name :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="560.0" layoutY="222.0" prefHeight="239.0" prefWidth="252.0" spacing="22.0">
+         <children>
+            <TextField fx:id="Mother_name" />
+            <TextField fx:id="Lucky_number" />
+            <TextField fx:id="Favorite_colour" />
+            <TextField fx:id="Best_friend_name" />
+            <TextField fx:id="School_name" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="366.0" layoutY="132.0" prefHeight="25.0" prefWidth="347.0" text="Other  Details">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="424.0" layoutY="523.0" mnemonicParsing="false" onAction="#clickOnSubmit" prefHeight="18.0" prefWidth="68.0" text="Submit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="585.0" layoutY="522.0" mnemonicParsing="false" onAction="#clickOnCancel" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+
+      </AnchorPane>
+   </center>
+</BorderPane>

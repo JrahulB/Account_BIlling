@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="account_billing.InvoiceController">
+   <children>
+      <HBox layoutX="335.0" layoutY="20.0" prefHeight="767.0" prefWidth="587.0">
+         <children>
+            <Pane fx:id="pane" prefHeight="767.0" prefWidth="585.0">
+               <children>
+                  <Label fx:id="header" alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="37.0" prefHeight="19.0" prefWidth="381.0" text="a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="add" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="76.0" prefHeight="19.0" prefWidth="381.0" text="a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mob" alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="103.0" prefHeight="19.0" prefWidth="399.0" text="a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="divider" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="152.0" prefHeight="19.0" prefWidth="414.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="178.0" layoutY="185.0" text="Date :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date" alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="186.0" prefHeight="17.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="312.0" layoutY="185.0" text="Bill No :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bill" alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="186.0" prefHeight="17.0" prefWidth="36.0" text="Label" />
+                  <Label fx:id="gst_no" alignment="CENTER" contentDisplay="CENTER" layoutX="295.0" layoutY="215.0" prefHeight="17.0" prefWidth="95.0" text="Label" />
+                  <Label layoutX="239.0" layoutY="214.0" text="GST No :">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="divider1" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="233.0" prefHeight="17.0" prefWidth="334.0" text="Label" />
+                  <Label fx:id="tablelabel" layoutX="90.0" layoutY="250.0" prefHeight="19.0" prefWidth="389.0" text="Label" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
